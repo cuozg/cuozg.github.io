@@ -1,56 +1,1273 @@
 <!DOCTYPE html>
-<html>
-  <title>NGUYEN PHI CUONG'S CV</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Montserrat"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
-  <style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Montserrat", sans-serif;
-    }
-    /* Remove margins from "page content" on small screens */
-    @media only screen and (max-width: 600px) {
-      #main {
-        margin-left: 0;
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cuong Nguyen | Senior Unity Developer and Client Lead</title>
+    <meta
+      name="description"
+      content="Senior Unity Developer and client lead with 15 years in the game industry, focused on systems thinking, zero-to-product delivery, and AI-assisted workflows."
+    />
+    <meta property="og:title" content="Cuong Nguyen | Senior Unity Developer and Client Lead" />
+    <meta
+      property="og:description"
+      content="A polished profile site for Cuong Nguyen, focused on Unity systems, product delivery, client leadership, and AI-enabled work."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="avatar.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;family=Sora:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #08101d;
+        --bg-soft: rgba(11, 21, 37, 0.84);
+        --panel: rgba(14, 24, 43, 0.82);
+        --panel-strong: rgba(9, 17, 30, 0.94);
+        --text: #f5f7ff;
+        --muted: #a7b4cc;
+        --line: rgba(163, 184, 213, 0.18);
+        --accent: #79e7ff;
+        --accent-strong: #2ac3ff;
+        --warm: #ffb377;
+        --success: #7bf7bf;
+        --shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+        --radius: 28px;
       }
-    }
-  </style>
-  <body class="w3-black">
 
+      * {
+        box-sizing: border-box;
+      }
 
-    <!-- Page Content -->
-    <div class="w3-padding-large" id="main">
-      <!-- Header/Home -->
-      <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-        <h1 class="w3-jumbo" >
-          <span class="w3-hide-small">NGUYEN PHI </span>CUONG
-        </h1>
-        <p style="font-size: 30px;">Unity Developer</p>
-        <img
-          style="border-radius: 100%;"
-          src="avatar.jpg"
-          alt="boy"
-          class="w3-image"
-          width="500"
-          height="500"
-        />
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Sora", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 15% 20%, rgba(121, 231, 255, 0.18), transparent 24%),
+          radial-gradient(circle at 85% 18%, rgba(255, 179, 119, 0.18), transparent 20%),
+          radial-gradient(circle at 50% 100%, rgba(42, 195, 255, 0.12), transparent 34%),
+          linear-gradient(180deg, #08101d 0%, #091425 50%, #050a12 100%);
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 56px 56px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 88%);
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02) 0%,
+          transparent 20%,
+          transparent 80%,
+          rgba(255, 255, 255, 0.02) 100%
+        );
+        mix-blend-mode: soft-light;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .page-shell {
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto;
+        padding-bottom: 40px;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 20px 0;
+        backdrop-filter: blur(18px);
+      }
+
+      .brand {
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+      }
+
+      .site-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 8px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(8, 14, 25, 0.5);
+      }
+
+      .site-nav a {
+        padding: 10px 14px;
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 0.92rem;
+        transition: color 180ms ease, background 180ms ease, transform 180ms ease;
+      }
+
+      .site-nav a:hover,
+      .site-nav a:focus-visible {
+        color: var(--text);
+        background: rgba(121, 231, 255, 0.12);
+        transform: translateY(-1px);
+      }
+
+      .section {
+        padding: 40px 0;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+        gap: 48px;
+        align-items: center;
+        padding-top: 56px;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: var(--accent);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+      }
+
+      h1,
+      h2 {
+        font-family: "Fraunces", serif;
+        letter-spacing: -0.04em;
+      }
+
+      h1 {
+        max-width: 14ch;
+        font-size: clamp(3.2rem, 7vw, 6.1rem);
+        line-height: 0.95;
+      }
+
+      h1 span {
+        display: block;
+        color: rgba(245, 247, 255, 0.82);
+      }
+
+      .intro-lead {
+        margin: 24px 0 0;
+        max-width: 42rem;
+        color: var(--muted);
+        font-size: clamp(1.08rem, 2.4vw, 1.34rem);
+        line-height: 1.7;
+      }
+
+      .hero-note {
+        margin: 18px 0 0;
+        max-width: 44rem;
+        color: rgba(167, 180, 204, 0.78);
+        font-size: 0.98rem;
+        line-height: 1.8;
+      }
+
+      .rotator-text {
+        display: inline-block;
+        min-width: 18ch;
+        color: var(--warm);
+        font-weight: 600;
+        transition: opacity 180ms ease, transform 180ms ease;
+      }
+
+      .rotator-text.is-switching {
+        opacity: 0.12;
+        transform: translateY(10px);
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 32px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 50px;
+        padding: 0 22px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        font-size: 0.96rem;
+        font-weight: 600;
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          background 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-2px);
+      }
+
+      .button-primary {
+        color: #04111d;
+        background: linear-gradient(135deg, var(--accent), #b7fff2 88%);
+        box-shadow: 0 14px 32px rgba(42, 195, 255, 0.28);
+      }
+
+      .button-secondary {
+        border-color: rgba(121, 231, 255, 0.24);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin: 32px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .stat-grid li,
+      .glass-card,
+      .project-card,
+      .portrait-card,
+      .cta-banner {
+        border: 1px solid var(--line);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
+          var(--panel);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(22px);
+      }
+
+      .stat-grid li {
+        padding: 18px 20px;
+        border-radius: 22px;
+      }
+
+      .stat-label {
+        display: block;
+        color: var(--muted);
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .stat-grid strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 1.08rem;
+        line-height: 1.4;
+      }
+
+      .hero-visual {
+        position: relative;
+        min-height: 620px;
+      }
+
+      .portrait-card {
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+        padding: 20px;
+        border-radius: 34px;
+      }
+
+      .portrait-card::after {
+        content: "";
+        position: absolute;
+        inset: auto -10% -35% 30%;
+        height: 220px;
+        background: radial-gradient(circle, rgba(42, 195, 255, 0.25), transparent 62%);
+        filter: blur(20px);
+      }
+
+      .portrait-card img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        aspect-ratio: 0.8;
+        object-fit: cover;
+        border-radius: 24px;
+      }
+
+      .portrait-glow {
+        position: absolute;
+        inset: 12% auto auto -14%;
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 179, 119, 0.5), transparent 65%);
+        filter: blur(18px);
+      }
+
+      .portrait-caption {
+        position: absolute;
+        left: 36px;
+        right: 36px;
+        bottom: 34px;
+        z-index: 2;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .portrait-caption span {
+        padding: 10px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 999px;
+        background: rgba(7, 12, 20, 0.64);
+        font-size: 0.82rem;
+      }
+
+      .floating-panel {
+        position: absolute;
+        z-index: 3;
+        max-width: 220px;
+        padding: 16px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 22px;
+        background: rgba(7, 13, 24, 0.82);
+        color: var(--text);
+        font-size: 0.92rem;
+        line-height: 1.6;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+        backdrop-filter: blur(16px);
+      }
+
+      .panel-top {
+        top: 10%;
+        right: -6%;
+      }
+
+      .panel-bottom {
+        bottom: 11%;
+        left: -8%;
+      }
+
+      .section-heading {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
+
+      .section-heading h2 {
+        max-width: 18ch;
+        font-size: clamp(2.1rem, 4.3vw, 3.5rem);
+        line-height: 1.02;
+      }
+
+      .story-panels,
+      .stack-layout,
+      .github-layout {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .glass-card {
+        padding: 28px;
+        border-radius: var(--radius);
+      }
+
+      .glass-card h3,
+      .project-card h3,
+      .card-header h3 {
+        font-size: 1.26rem;
+        line-height: 1.3;
+      }
+
+      .glass-card p,
+      .project-card p,
+      .principle p,
+      .live-item p {
+        margin: 14px 0 0;
+        color: var(--muted);
+        font-size: 0.97rem;
+        line-height: 1.8;
+      }
+
+      .compact-list {
+        display: grid;
+        gap: 12px;
+        margin: 16px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .compact-list li {
+        position: relative;
+        padding-left: 20px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .compact-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.72em;
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent), var(--warm));
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 20px;
+      }
+
+      .project-card {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        min-height: 100%;
+        padding: 28px;
+        border-radius: var(--radius);
+        transition:
+          transform 220ms ease,
+          border-color 220ms ease,
+          box-shadow 220ms ease;
+      }
+
+      .project-card:hover,
+      .project-card:focus-within {
+        transform: translateY(-6px);
+        border-color: rgba(121, 231, 255, 0.3);
+        box-shadow: 0 36px 90px rgba(0, 0, 0, 0.42);
+      }
+
+      .card-top,
+      .item-top,
+      .card-header,
+      .item-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+      }
+
+      .project-type,
+      .live-label,
+      .status-dot {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .status-dot::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--success);
+        box-shadow: 0 0 12px rgba(123, 247, 191, 0.6);
+      }
+
+      .pill-row,
+      .tag-cloud {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .pill-row span,
+      .tag-cloud span {
+        padding: 9px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        color: rgba(245, 247, 255, 0.86);
+        font-size: 0.82rem;
+      }
+
+      .principle-list {
+        display: grid;
+        gap: 16px;
+        margin-top: 8px;
+      }
+
+      .principle {
+        padding: 18px 18px 2px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .principle strong {
+        font-size: 1rem;
+      }
+
+      .live-list {
+        display: grid;
+        gap: 14px;
+        margin-top: 22px;
+      }
+
+      .live-item {
+        display: grid;
+        gap: 10px;
+        padding: 18px 20px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.02);
+        transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+      }
+
+      a.live-item:hover,
+      a.live-item:focus-visible {
+        transform: translateY(-2px);
+        border-color: rgba(121, 231, 255, 0.28);
+        background: rgba(121, 231, 255, 0.05);
+      }
+
+      .live-item strong {
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+
+      .live-item p {
+        margin: 0;
+      }
+
+      .item-meta {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        color: rgba(167, 180, 204, 0.86);
+        font-size: 0.84rem;
+      }
+
+      .item-meta span {
+        padding-right: 14px;
+      }
+
+      .loading-text {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .cta-banner {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 24px;
+        margin-top: 20px;
+        padding: 30px;
+        border-radius: 32px;
+        background:
+          radial-gradient(circle at left center, rgba(121, 231, 255, 0.16), transparent 26%),
+          radial-gradient(circle at right center, rgba(255, 179, 119, 0.18), transparent 24%),
+          var(--panel-strong);
+      }
+
+      .cta-banner h2 {
+        max-width: 18ch;
+        font-size: clamp(1.9rem, 4vw, 3rem);
+        line-height: 1.05;
+      }
+
+      .cta-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .site-footer {
+        padding: 28px 0 12px;
+        color: rgba(167, 180, 204, 0.75);
+        font-size: 0.88rem;
+        text-align: center;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(26px);
+        transition:
+          opacity 700ms ease,
+          transform 700ms ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .delay-1 {
+        transition-delay: 120ms;
+      }
+
+      .delay-2 {
+        transition-delay: 220ms;
+      }
+
+      @media (max-width: 1100px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-visual {
+          min-height: auto;
+          max-width: 620px;
+        }
+
+        .panel-top {
+          right: 4%;
+        }
+
+        .panel-bottom {
+          left: 4%;
+        }
+
+        .project-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .cta-banner {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .page-shell {
+          width: min(100% - 24px, 1240px);
+        }
+
+        .site-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .site-nav {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .section {
+          padding: 32px 0;
+        }
+
+        .stat-grid,
+        .story-panels,
+        .stack-layout,
+        .github-layout,
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding-top: 26px;
+        }
+
+        h1 {
+          max-width: 11ch;
+        }
+
+        .rotator-text {
+          min-width: 0;
+        }
+
+        .floating-panel {
+          position: static;
+          max-width: none;
+          margin-top: 14px;
+        }
+
+        .hero-visual {
+          display: grid;
+          gap: 14px;
+        }
+
+        .portrait-caption {
+          left: 20px;
+          right: 20px;
+          bottom: 22px;
+        }
+
+        .glass-card,
+        .project-card,
+        .cta-banner,
+        .portrait-card {
+          padding: 22px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top">CUOZG</a>
+        <nav class="site-nav" aria-label="Section navigation">
+          <a href="#about">About</a>
+          <a href="#work">Focus</a>
+          <a href="#stack">Stack</a>
+          <a href="#github">GitHub</a>
+        </nav>
       </header>
 
-      <!-- About Section -->
-      
+      <main id="top">
+        <section class="hero section">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">15 Years in Games / Client Lead at GearGames / Ha Noi, Viet Nam</p>
+            <h1>
+              Cuong Nguyen builds
+              <span>game systems from zero to real product.</span>
+            </h1>
+            <p class="intro-lead">
+              I bring a
+              <span
+                class="rotator-text"
+                id="hero-rotator"
+                aria-live="polite"
+              >
+                systems mindset
+              </span>
+              to Unity development, combining production-grade C#, client
+              leadership, and delivery discipline that helps teams move from
+              concept to shipped game.
+            </p>
+            <p class="hero-note">
+              Right now a large part of my learning is focused on AI: improving
+              how I use it, improving the quality of my AI skills, and turning
+              that into practical workflow gains for day-to-day game production.
+            </p>
+            <div class="cta-row">
+              <a
+                class="button button-primary"
+                href="https://github.com/cuozg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View GitHub
+              </a>
+              <a class="button button-secondary" href="#work">See current focus</a>
+            </div>
+            <ul class="stat-grid">
+              <li>
+                <span class="stat-label">Experience</span>
+                <strong>15+ years in the game industry</strong>
+              </li>
+              <li>
+                <span class="stat-label">Current Role</span>
+                <strong>Client Lead / Senior Unity Developer</strong>
+              </li>
+              <li>
+                <span class="stat-label">Company</span>
+                <strong id="metric-company">GearGames</strong>
+              </li>
+              <li>
+                <span class="stat-label">Delivery</span>
+                <strong>From zero to product</strong>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-visual reveal delay-1">
+            <div class="portrait-card">
+              <div class="portrait-glow"></div>
+              <img src="avatar.jpeg" alt="Portrait of Cuong Nguyen" />
+              <div class="portrait-caption">
+                <span>Systems thinking</span>
+                <span>Zero-to-product delivery</span>
+              </div>
+            </div>
+            <div class="floating-panel panel-top">15 years building games</div>
+            <div class="floating-panel panel-bottom">
+              Client lead / Unity systems / AI workflow
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="about">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Profile</p>
+            <h2>Systems-minded game development with product ownership.</h2>
+          </div>
+          <div class="story-panels">
+            <article class="glass-card reveal">
+              <h3>About me</h3>
+              <p>
+                I'm a Hanoi-based Unity developer with 15 years in the game
+                industry, currently working as a client lead at GearGames. I do
+                not look at features in isolation. I think about the whole
+                system: gameplay, architecture, tools, production flow, and the
+                constraints that shape the final product.
+              </p>
+              <p>
+                I know how to build a game from zero, establish the technical
+                foundation, align with clients and stakeholders, and carry that
+                work through to a product that can actually ship and scale.
+              </p>
+            </article>
+
+            <article class="glass-card reveal delay-1">
+              <h3>What I optimize for</h3>
+              <ul class="compact-list">
+                <li>System design that survives growth, iteration, and production pressure</li>
+                <li>Building games from first technical decisions to product-ready delivery</li>
+                <li>Clear client-facing leadership grounded in technical reality</li>
+                <li>
+                  AI-assisted workflows that improve execution quality and team
+                  speed
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="work">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Current Focus</p>
+            <h2>Where I am pushing hardest right now.</h2>
+          </div>
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <div class="card-top">
+                <span class="project-type">Main public focus</span>
+                <a
+                  href="https://github.com/cuozg/oh-my-skills"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open ->
+                </a>
+              </div>
+              <h3>Oh My Skills</h3>
+              <p>
+                Oh My Skills reflects where I am investing serious effort now:
+                learning AI hard, sharpening how I work with AI, and building a
+                reusable skill system that improves engineering quality and
+                workflow speed in real projects.
+              </p>
+              <div class="pill-row">
+                <span>AI skills</span>
+                <span>Workflow automation</span>
+                <span>Unity productivity</span>
+                <span>Python</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="stack">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Stack &amp; Approach</p>
+            <h2>Technical depth shaped by systems, delivery, and learning.</h2>
+          </div>
+          <div class="stack-layout">
+            <article class="glass-card reveal">
+              <h3>Core strengths I want front and center</h3>
+              <div class="tag-cloud" style="margin-top: 18px">
+                <span>Unity</span>
+                <span>C#</span>
+                <span>Game systems</span>
+                <span>Product architecture</span>
+                <span>Editor scripting</span>
+                <span>UI Toolkit</span>
+                <span>Performance reviews</span>
+                <span>Client leadership</span>
+                <span>Zero-to-product delivery</span>
+                <span>VContainer</span>
+                <span>SignalBus</span>
+                <span>UniTask</span>
+                <span>GitHub workflows</span>
+                <span>AI tooling</span>
+                <span>Workflow automation</span>
+                <span>AI-native pipelines</span>
+              </div>
+            </article>
+
+            <article class="glass-card reveal delay-1">
+              <h3>How I like teams and systems to work</h3>
+              <div class="principle-list">
+                <div class="principle">
+                  <strong>System thinking first</strong>
+                  <p>
+                    Features, tools, pipelines, and team process should support
+                    one coherent game system instead of drifting apart.
+                  </p>
+                </div>
+                <div class="principle">
+                  <strong>From zero to product</strong>
+                  <p>
+                    I value decisions that help a project start clean, scale
+                    safely, and still behave like a product near launch.
+                  </p>
+                </div>
+                <div class="principle">
+                  <strong>AI as a force multiplier</strong>
+                  <p>
+                    I am actively improving my AI skills so the work gets
+                    faster, clearer, and more useful without lowering standards.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="github">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Live GitHub</p>
+            <h2>Public repos and activity pulled straight from GitHub.</h2>
+          </div>
+          <div class="github-layout">
+            <article class="glass-card reveal">
+              <div class="card-header">
+                <h3>Latest repositories</h3>
+                <span class="status-dot">Live</span>
+              </div>
+              <div class="live-list" id="repo-list">
+                <p class="loading-text">Loading public repositories...</p>
+              </div>
+            </article>
+
+            <article class="glass-card reveal delay-1">
+              <div class="card-header">
+                <h3>Recent activity</h3>
+                <span class="status-dot">Live</span>
+              </div>
+              <div class="live-list" id="activity-list">
+                <p class="loading-text">Loading recent GitHub activity...</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="cta-banner reveal">
+            <div>
+              <p class="eyebrow">Let's Build</p>
+              <h2>
+                Need a senior Unity developer who can think in systems, lead
+                clients, and build from zero to product?
+              </h2>
+            </div>
+            <div class="cta-actions">
+              <a
+                class="button button-primary"
+                href="https://github.com/cuozg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Start on GitHub
+              </a>
+              <a
+                class="button button-secondary"
+                href="https://github.com/cuozg/cuozg.github.io"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View site source
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        Designed for GitHub Pages and grounded in public profile data from
+        github.com/cuozg.
+      </footer>
+    </div>
+
+    <script>
+      const rotator = document.getElementById("hero-rotator");
+      const rotatingPhrases = [
+        "systems mindset",
+        "zero-to-product delivery",
+        "client-facing leadership",
+        "AI-accelerated workflows"
+      ];
+
+      let rotatorIndex = 0;
+      window.setInterval(() => {
+        rotator.classList.add("is-switching");
+        window.setTimeout(() => {
+          rotatorIndex = (rotatorIndex + 1) % rotatingPhrases.length;
+          rotator.textContent = rotatingPhrases[rotatorIndex];
+          rotator.classList.remove("is-switching");
+        }, 180);
+      }, 2600);
+
+      const revealTargets = document.querySelectorAll(".reveal");
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.18 }
+        );
+
+        revealTargets.forEach((target) => observer.observe(target));
+      } else {
+        revealTargets.forEach((target) => target.classList.add("visible"));
+      }
+
+      const fallbackRepos = [
+        {
+          name: "oh-my-skills",
+          html_url: "https://github.com/cuozg/oh-my-skills",
+          description:
+            "My current AI-focused repository for improving how I learn, structure, and apply AI skills in production work.",
+          language: "Python",
+          fork: false,
+          pushed_at: "2026-03-21T11:09:07Z"
+        },
+        {
+          name: "unity-mcp",
+          html_url: "https://github.com/cuozg/unity-mcp",
+          description:
+            "Unity editor bridge for AI assistants via the Model Context Protocol.",
+          language: "Mixed stack",
+          fork: true,
+          pushed_at: "2026-01-27T01:35:41Z"
+        },
+        {
+          name: "theone-training-skills",
+          html_url: "https://github.com/cuozg/theone-training-skills",
+          description:
+            "Training repository for production-ready engineering standards, including Unity patterns.",
+          language: "Documentation",
+          fork: true,
+          pushed_at: "2025-12-21T04:38:39Z"
+        },
+        {
+          name: "UnityLibrary",
+          html_url: "https://github.com/cuozg/UnityLibrary",
+          description:
+            "Library of scripts, snippets, and shaders for Unity.",
+          language: "Unity",
+          fork: true,
+          pushed_at: "2026-02-12T20:08:02Z"
+        }
+      ];
+
+      const fallbackEvents = [
+        {
+          type: "PushEvent",
+          repo: { name: "cuozg/oh-my-skills" },
+          payload: { ref: "refs/heads/main" },
+          created_at: "2026-03-21T11:09:07Z"
+        },
+        {
+          type: "WatchEvent",
+          repo: { name: "different-ai/openwork" },
+          created_at: "2026-03-21T14:36:28Z"
+        },
+        {
+          type: "WatchEvent",
+          repo: { name: "anthropics/skills" },
+          created_at: "2026-03-21T14:34:22Z"
+        }
+      ];
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#39;");
+      }
+
+      function formatDate(value) {
+        return new Intl.DateTimeFormat("en", {
+          month: "short",
+          day: "numeric",
+          year: "numeric"
+        }).format(new Date(value));
+      }
+
+      function branchFromRef(ref) {
+        return ref ? ref.split("/").slice(-1)[0] : "default branch";
+      }
+
+      function describeEvent(event) {
+        switch (event.type) {
+          case "PushEvent":
+            return `Pushed to ${branchFromRef(event.payload && event.payload.ref)}`;
+          case "WatchEvent":
+            return "Starred a repository";
+          case "CreateEvent":
+            return `Created ${event.payload && event.payload.ref_type ? event.payload.ref_type : "a resource"}`;
+          case "PullRequestEvent":
+            return `${event.payload && event.payload.action ? event.payload.action : "Updated"} a pull request`;
+          default:
+            return event.type.replace("Event", "");
+        }
+      }
+
+      function renderRepos(repos) {
+        const repoList = document.getElementById("repo-list");
+        repoList.innerHTML = repos
+          .slice(0, 4)
+          .map((repo) => {
+            const label = repo.fork ? "Forked contribution" : "Repository";
+            const language = repo.language || "Mixed stack";
+            const updated = repo.pushed_at || repo.updated_at;
+            return `
+              <a class="live-item" href="${escapeHtml(repo.html_url)}" target="_blank" rel="noreferrer">
+                <div class="item-top">
+                  <strong>${escapeHtml(repo.name)}</strong>
+                  <span class="live-label">${escapeHtml(label)}</span>
+                </div>
+                <p>${escapeHtml(repo.description || "Public repository.")}</p>
+                <div class="item-meta">
+                  <span>${escapeHtml(language)}</span>
+                  <span>Updated ${escapeHtml(formatDate(updated))}</span>
+                </div>
+              </a>
+            `;
+          })
+          .join("");
+      }
+
+      function renderEvents(events) {
+        const activityList = document.getElementById("activity-list");
+        activityList.innerHTML = events
+          .slice(0, 4)
+          .map((event) => {
+            const repoName = event.repo && event.repo.name ? event.repo.name : "github";
+            return `
+              <a class="live-item" href="https://github.com/${escapeHtml(repoName)}" target="_blank" rel="noreferrer">
+                <div class="item-top">
+                  <strong>${escapeHtml(describeEvent(event))}</strong>
+                  <span class="live-label">${escapeHtml(event.type.replace("Event", ""))}</span>
+                </div>
+                <p>${escapeHtml(repoName)}</p>
+                <div class="item-meta">
+                  <span>${escapeHtml(formatDate(event.created_at))}</span>
+                </div>
+              </a>
+            `;
+          })
+          .join("");
+      }
+
+      async function hydrateGitHub() {
+        const endpoints = [
+          "https://api.github.com/users/cuozg",
+          "https://api.github.com/users/cuozg/repos?per_page=100&sort=updated",
+          "https://api.github.com/users/cuozg/events/public?per_page=20"
+        ];
+
+        try {
+          const [userResponse, reposResponse, eventsResponse] = await Promise.all(
+            endpoints.map((endpoint) => fetch(endpoint, { headers: { Accept: "application/vnd.github+json" } }))
+          );
+
+          if (userResponse.ok) {
+            const profile = await userResponse.json();
+            const companyMetric = document.getElementById("metric-company");
+            if (companyMetric) {
+              companyMetric.textContent = profile.company || "Independent";
+            }
+          }
+
+          if (reposResponse.ok) {
+            const repos = await reposResponse.json();
+            const latestRepos = repos
+              .filter((repo) => repo.name !== "cuozg.github.io")
+              .sort(
+                (left, right) =>
+                  new Date(right.pushed_at || right.updated_at) -
+                  new Date(left.pushed_at || left.updated_at)
+              );
+            renderRepos(latestRepos.length ? latestRepos : fallbackRepos);
+          } else {
+            renderRepos(fallbackRepos);
+          }
+
+          if (eventsResponse.ok) {
+            const events = await eventsResponse.json();
+            const interestingEvents = events.filter((event) =>
+              ["PushEvent", "WatchEvent", "CreateEvent", "PullRequestEvent"].includes(event.type)
+            );
+            renderEvents(interestingEvents.length ? interestingEvents : fallbackEvents);
+          } else {
+            renderEvents(fallbackEvents);
+          }
+        } catch (error) {
+          renderRepos(fallbackRepos);
+          renderEvents(fallbackEvents);
+        }
+      }
+
+      renderRepos(fallbackRepos);
+      renderEvents(fallbackEvents);
+      hydrateGitHub();
+    </script>
   </body>
 </html>
